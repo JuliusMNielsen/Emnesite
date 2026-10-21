@@ -1,0 +1,120 @@
+main {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+/*************************index********************/
+/*************************hero*********************/
+@media (min-width: 1024px) {
+  body {
+    margin: 0;
+  }
+
+  .hero_forside {
+    width: 100vw;
+    margin-left: calc(50% - 50vw); /* bryder ud af containerens max-width/padding */
+    grid-template-rows: calc(100vh - 80px); /* hele skærmen under headeren */
+  }
+
+  .hero_forside video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .h1_box {
+    margin: 0 0 150px 80px; /* lidt mere luft til venstre på store skærme */
+  }
+  .h1_forside {
+    font-size: 6rem;
+  }
+}
+/************************midterfelt*******************/
+.midterfelt {
+  display: grid;
+  grid-template-columns: 1fr; /* mobil: under hinanden */
+  gap: 24px;
+}
+
+/* Desktop: tre ved siden af hinanden */
+@media (min-width: 1024px) {
+  .midterfelt {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Fælles styling for alle tre kort */
+.midterfelt > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.midterfelt > div img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover; /* billederne beskæres ens i stedet for at blive strakt */
+}
+
+.midterfelt > div a {
+  margin-top: auto; /* skubber knappen ned i bunden af kortet */
+}
+
+@media (min-width: 1024px) {
+  .maps_kort {
+    display: block;
+    width: 100%;
+    height: 500px;
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  .maps_kort {
+    display: block;
+    box-sizing: border-box; /* kanten tælles med i bredden */
+    width: calc(100% - 32px);
+    height: 250px;
+    margin: 16px;
+    border: 3px solid #d94820;
+  }
+}
+/***************************booking***********************/
+@media (min-width: 1024px) {
+  .filter {
+    display: grid;
+    grid-template-columns: 1fr; /* én kolonne i fuld bredde */
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .filter .dage {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 lige brede dage */
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .filter .dage a {
+    width: auto;
+    justify-self: stretch; /* fylder hele kolonnen */
+  }
+
+  .varighed {
+    display: grid;
+    grid-template-columns: repeat(2, auto); /* 2 knapper ved siden af hinanden */
+    gap: 1rem;
+    margin-top: 0;
+  }
+
+  .varighed a {
+    width: auto;
+    padding: 1.5rem 3rem;
+  }
+
+  .din_booking {
+    min-height: 100vh; /* 80 % af skærmhøjden */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* spreder rækkerne ud over hele højden */
+  }
+}

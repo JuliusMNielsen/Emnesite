@@ -1,0 +1,885 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+/******************generelt*************/
+body {
+  background-color: #14213d;
+  color: white;
+}
+/**********************menu**************/
+
+header {
+  z-index: 1000;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #14213d;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid #d94820;
+
+  .logo img {
+    width: 50px;
+    height: 40px;
+  }
+}
+
+nav {
+  /* Desktop*/
+  display: flex;
+  align-items: center;
+
+  @media (width < 800px) {
+    /* mobil */
+    &.active .menu {
+      display: block;
+      background-color: #14213d;
+      position: absolute;
+      top: 90px;
+      right: 0;
+      width: 25%;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+      border: 3px solid #d94820;
+    }
+
+    &.active .menu li {
+      margin: 10px 20px;
+    }
+
+    &.active .menu a {
+      font-size: 24px;
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin-right: 20px;
+  }
+
+  li:last-child {
+    margin-right: 0;
+  }
+
+  a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    text-align: end;
+    font-size: 1.4rem;
+    &:hover {
+      color: #d94820;
+    }
+  }
+  @media (width < 800px) {
+    display: none;
+  }
+}
+
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  display: none;
+
+  .line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    margin-bottom: 5px;
+    transition: 0.2s linear;
+  }
+
+  @media (width < 800px) {
+    display: block;
+    background-color: transparent;
+    border: 0;
+
+    &.active .line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+      transition: 0.2s linear;
+    }
+
+    &.active .line:nth-child(2) {
+      opacity: 0;
+      transition: 0.15s linear;
+    }
+
+    &.active .line:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+      transition: 0.2s linear;
+    }
+  }
+}
+/**********************footer*************/
+footer {
+  background: #c9522f;
+  padding: 40px 22px 60px;
+  margin-top: 150px;
+}
+
+/* Logo + navn */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo img {
+  height: 56px;
+}
+
+.logo p {
+  margin: 0;
+  color: #182040;
+  font-size: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+}
+
+/* Sociale ikoner */
+.sociale {
+  display: flex;
+  gap: 26px;
+  margin-top: 28px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid #f0c4b6; /* den tynde lyse streg */
+}
+
+.sociale img {
+  height: 28px;
+  display: block;
+}
+
+/* Mail */
+footer > a {
+  display: block;
+  margin-top: 28px;
+  color: #ffffff;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+footer > a:hover {
+  text-decoration: underline;
+}
+/**********************hero**************/
+.hero_forside {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100vh;
+}
+
+.hero_forside video {
+  grid-column: 1;
+  grid-row: 1;
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.5);
+  border-bottom: 3px solid #d94820;
+}
+
+.h1_box {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: end;
+  justify-self: start;
+  z-index: 1;
+  margin: 0 0 150px 20px;
+}
+
+.h1_forside {
+  color: #d94820;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  font-size: 4rem;
+}
+
+.h1_tekst {
+  color: white;
+  font-size: 1.2rem;
+}
+.h1_button {
+  background-color: #d94820;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 8px;
+  display: inline-block;
+  margin-top: 20px;
+  text-align: center;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/*********************midterfelt************/
+
+.søge_knapper {
+  padding: 20px;
+}
+
+.grid_select {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.søge_knap1 {
+  background-color: white;
+  color: #d94820;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 8px;
+  display: block;
+  margin-top: 20px;
+  border: 3px solid #d94820;
+}
+
+.søge_knap2 {
+  background-color: white;
+  color: #d94820;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 8px;
+  display: block;
+  margin-top: 20px;
+  border: 3px solid #d94820;
+}
+
+.søge_knap3 {
+  background-color: white;
+  color: #d94820;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 8px;
+  display: block;
+  margin-top: 20px;
+  border: 3px solid #d94820;
+}
+
+.se_baner {
+  background-color: #d94820;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 8px;
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.midterfelt {
+  padding: 2rem 1.5rem;
+  display: grid;
+  gap: 1.75rem;
+  color: black;
+}
+
+.kort1 {
+  background: white;
+  border: 6px solid var(--orange);
+  padding: 8px;
+  border: 3px solid #d94820;
+}
+
+.kort1 h3 {
+  margin: 10px;
+  font-size: 1.5rem;
+}
+
+.kort1 p {
+  font-size: 1;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.kort1 a {
+  background-color: #d94820;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 8px;
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.kort2 {
+  background: white;
+  border: 6px solid var(--orange);
+  padding: 8px;
+  border: 3px solid #d94820;
+}
+
+.kort2 h3 {
+  margin: 10px;
+  font-size: 1.5rem;
+}
+
+.kort2 p {
+  font-size: 1;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.kort2 a {
+  background-color: #d94820;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 8px;
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.kort3 {
+  background: white;
+  border: 6px solid var(--orange);
+  padding: 8px;
+  border: 3px solid #d94820;
+}
+
+.kort3 h3 {
+  margin: 10px;
+  font-size: 1.5rem;
+}
+
+.kort3 p {
+  font-size: 1;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.kort3 a {
+  background-color: #d94820;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 8px;
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.midterfelt img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+h2 {
+  margin-left: 25px;
+  font-size: 2rem;
+}
+
+.kort h2 {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.maps_kort {
+  border-radius: 8px;
+}
+/*************************bookingside******************************/
+.side_top {
+  background: #182040;
+  padding: 24px 22px 32px;
+}
+
+.booking_overskrift p {
+  margin: 0;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.booking_overskrift h1 {
+  margin: 4px 0 0;
+  color: #d94820;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.trin {
+  display: flex;
+  align-items: center;
+  padding: 20px 60px 50px;
+}
+
+.trin_punkt {
+  position: relative;
+}
+
+/* Cirklen med tallet */
+.trin_punkt span {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #fff;
+  color: #161f3a;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Teksten under cirklen */
+.trin_punkt p {
+  position: absolute;
+  top: 44px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  color: #fff;
+  white-space: nowrap;
+}
+
+/* Stregen mellem cirklerne */
+.linje {
+  flex: 1;
+  height: 3px;
+  background: #fff;
+  margin: 0 6px;
+}
+
+/* Det aktive trin bliver orange */
+.trin_punkt.aktiv span {
+  background: #d94820;
+  color: #fff;
+}
+
+.trin_punkt.aktiv p {
+  color: #d94820;
+  font-weight: bold;
+}
+
+.linje.aktiv {
+  background: #d94820;
+}
+
+.søge_felt {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 20px;
+}
+
+.dage a {
+  width: 70px;
+  height: 85px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+
+  background-color: white;
+  color: #d94820;
+  border: 3px solid #d94820;
+  border-radius: 22px;
+  text-decoration: none;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.dage {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 100px)); /* 6 lige brede kolonner, max 100px */
+  gap: 16px;
+  padding: 20px;
+}
+
+.dage a:hover {
+  background: #d94820;
+  color: white;
+}
+
+.varighed a {
+  width: 220px;
+  height: 65px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+
+  background-color: white;
+  color: #d94820;
+  border: 3px solid #d94820;
+  border-radius: 22px;
+  text-decoration: none;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.varighed a:hover {
+  background: #d94820;
+  color: white;
+}
+
+.varighed {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 20px;
+}
+
+.baneoversigt {
+  background: #182040;
+  padding: 32px 24px;
+  display: grid;
+  gap: 16px;
+}
+
+.baneoversigt > div[class^="række"] {
+  display: grid;
+  grid-template-columns: 70px repeat(4, 1fr);
+  gap: 12px;
+  align-items: center;
+}
+
+.baneoversigt p {
+  margin: 0;
+  color: #c9522f;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.række1 p:not(:first-child) {
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #d94820;
+}
+
+.baneoversigt a {
+  display: grid;
+  place-items: center;
+  height: 70px;
+  border-radius: 12px;
+  border: 3px solid #c9522f;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.baneoversigt a.ledig {
+  background: #ffffff;
+  color: #c9522f;
+}
+
+.baneoversigt a.ledig:hover {
+  background: #fbe9e3;
+}
+
+.baneoversigt a.optaget {
+  background: #9b9b9b;
+  border-color: #9b9b9b;
+  color: #000000;
+  pointer-events: none;
+}
+
+.baneoversigt a.valgt {
+  background: #c9522f;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.forklaring {
+  display: flex;
+  gap: 32px;
+  margin-left: 82px;
+  margin-top: 8px;
+}
+
+.forklaring p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.forklaring span {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+}
+
+.forklaring .ledig {
+  background: #ffffff;
+  border: 2px solid #000000;
+}
+.forklaring .optaget {
+  background: #9b9b9b;
+}
+.forklaring .valgt {
+  background: #c9522f;
+}
+
+.din_booking {
+  display: grid;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 24px 34px 34px;
+  margin: 0 30px;
+  color: #000000;
+}
+
+.din_booking h3 {
+  margin: 0 0 4px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* Label til venstre, værdi til højre */
+.din_booking p,
+.din_booking h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+
+.din_booking p {
+  padding: 18px 0;
+  border-bottom: 2px solid #000000;
+  font-size: 20px;
+}
+
+/* Pris */
+.din_booking h2 {
+  padding: 26px 0 22px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.din_booking h2 strong {
+  font-size: 46px;
+}
+
+/* Knap */
+.din_booking a {
+  display: grid;
+  place-items: center;
+  height: 70px;
+  background: #c9522f;
+  color: #ffffff;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.din_booking a:hover {
+  background: #a9431f;
+}
+/***************************event**********************/
+.event_h1 {
+  display: grid;
+  gap: 8px;
+  padding: 16px 16px 24px;
+  background-color: #172142;
+}
+
+.h1_event {
+  color: #cf5230;
+  font-size: 2.2rem;
+  line-height: 1.1;
+}
+
+.h1_tekst {
+  line-height: 1.4;
+}
+
+/* ---------- Filtre ---------- */
+.filter_events {
+  display: grid;
+  gap: 16px;
+  padding: 20px 16px;
+}
+
+.filter_gruppe {
+  display: grid;
+  gap: 8px;
+}
+
+.filter_knapper {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  gap: 8px;
+}
+
+.filter_knapper a {
+  display: grid;
+  place-items: center;
+  padding: 8px 12px;
+  border: 2px solid #cf5230;
+  border-radius: 20px;
+  background-color: #ffffff;
+  color: #cf5230;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* "Alle" er udfyldt som i designet – kun visuelt, ingen aktiv-tilstand */
+.filter_knapper a:first-child {
+  background-color: #cf5230;
+  color: #ffffff;
+}
+
+.søge_knap3 {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #cf5230;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #cf5230;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+/* ---------- Eventkort ---------- */
+.event_kort {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 12px;
+  margin: 24px 16px;
+  padding: 8px;
+  background-color: #ffffff;
+  border: 4px solid #cf5230;
+  color: #111111;
+}
+
+.event_kort img {
+  width: 100%;
+  aspect-ratio: 5 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.event_indhold {
+  display: grid;
+  gap: 14px;
+  padding: 0 10px 10px;
+}
+
+.event_tags {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  gap: 6px;
+}
+
+.tag {
+  padding: 4px 12px;
+  border: 2px solid #cf5230;
+  border-radius: 20px;
+  color: #cf5230;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+/* "Fremhævet" er udfyldt */
+.tag:first-child {
+  background-color: #cf5230;
+  color: #ffffff;
+}
+
+.event_indhold h2 {
+  font-size: 2rem;
+}
+
+.event_info {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  gap: 14px;
+  font-weight: 700;
+}
+
+.event_indhold p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.event_knapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.tilmeld,
+.laes_mere {
+  display: grid;
+  place-items: center;
+  padding: 12px;
+  border: 2px solid #cf5230;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.tilmeld {
+  background-color: #cf5230;
+  color: #ffffff;
+}
+
+.laes_mere {
+  background-color: #ffffff;
+  color: #cf5230;
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking side</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="icon" href="./img/favicon.ico">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="./img/logo.webp" alt="Logo">
+            </a>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="booking.html">Baner</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="#">Kontakt</a></li>
+                <li><a href="#">Klubben</a></li>
+            </ul>
+            <button class="burger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+        </nav>
+    </header>
+    <main>
+        <section class="side_top">
+            <div class="booking_overskrift">
+                <p>Forside / Book bane</p>
+                <h1>Book bane</h1>
+            </div>
+            <div class="trin">
+                <div class="trin_punkt aktiv">
+                    <span>1</span>
+                    <p>Vælg tid og bane</p>
+                </div>
+                <div class="linje aktiv"></div>
+                <div class="trin_punkt">
+                    <span>2</span>
+                    <p>Bekræft</p>
+                </div>
+                <div class="linje"></div>
+                <div class="trin_punkt">
+                    <span>3</span>
+                    <p>Færdig</p>
+                </div>
+            </div>
+        </section>
+        <div class="søge_felt">
+            <select class="søge_knap1" id="klub" name="klub">
+                <option value="Alle klubber">Alle klubber</option>
+                <option value="hilleroed">Hillerød Padel</option>
+                <option value="gentofte">Gentofte Padel</option>
+                <option value="tisvilde">Tisvilde Padel</option>
+                <option value="hørsholm">Hørsholm Padel</option>
+            </select>
+            <a href="#" class="h1_button">SØG</a>
+        </div>
+        <section class="filter">
+            <div class="dage">
+                <a href="#"><span>Man</span><span>21</span></a>
+                <a href="#"><span>Tir</span><span>22</span></a>
+                <a href="#"><span>Ons</span><span>23</span></a>
+                <a href="#"><span>Tor</span><span>24</span></a>
+                <a href="#"><span>Fre</span><span>25</span></a>
+                <a href="#"><span>Lør</span><span>26</span></a>
+            </div>
+        </section>
+        <div class="varighed">
+            <a href="#">1 Time</a>
+            <a href="#">2 Timer</a>
+        </div>
+        <section class="baneoversigt">
+            <div class="række1">
+                <p></p>
+                <p>Bane 1</p>
+                <p>Bane 2</p>
+                <p>Bane 3</p>
+                <p>Bane 4</p>
+            </div>
+            <div class="række2">
+                <p>15:00</p>
+                <a href="#" class="ledig">Ledig</a>
+                <a href="#" class="ledig">Ledig</a>
+                <a href="#" class="ledig">Ledig</a>
+                <a href="#" class="ledig">Ledig</a>
+            </div>
+            <div class="række3">
+                <p>16:00</p>
+                <a href="#" class="ledig">Ledig</a>
+                <a href="#" class="optaget">Optaget</a>
+                <a href="#" class="ledig">Ledig</a>
+                <a href="#" class="ledig">Ledig</a>
+            </div>
+            <div class="række4">
+                <p>17:00</p>
+                <a href="#" class="ledig">Ledig</a>
+                <a href="#" class="ledig">Ledig</a>
+                <a href="#" class="optaget">Optaget</a>
+                <a href="#" class="ledig">Ledig</a>
+            </div>
+            <div class="række5">
+                <p>18:00</p>
+                <a href="#" class="ledig">Ledig</a>
+                <a href="#" class="valgt">Valgt</a>
+                <a href="#" class="optaget">Optaget</a>
+                <a href="#" class="ledig">Ledig</a>
+            </div>
+            <div class="række6">
+                <p>19:00</p>
+                <a href="#" class="ledig">Ledig</a>
+                <a href="#" class="ledig">Ledig</a>
+                <a href="#" class="ledig">Ledig</a>
+                <a href="#" class="ledig">Ledig</a>
+            </div>
+            <div class="række7">
+                <p>20:00</p>
+                <a href="#" class="optaget">Optaget</a>
+                <a href="#" class="ledig">Ledig</a>
+                <a href="#" class="ledig">Ledig</a>
+                <a href="#" class="ledig">Ledig</a>
+            </div>
+            <div class="række8">
+                <p>21:00</p>
+                <a href="#" class="optaget">Optaget</a>
+                <a href="#" class="ledig">Ledig</a>
+                <a href="#" class="ledig">Ledig</a>
+                <a href="#" class="ledig">Ledig</a>
+            </div>
+
+            <div class="forklaring">
+                <p><span class="ledig"></span>Ledig</p>
+                <p><span class="optaget"></span>Optaget</p>
+                <p><span class="valgt"></span>Valgt</p>
+            </div>
+        </section>
+        <section class="din_booking">
+            <h3>Din booking</h3>
+            <p>Dato <strong>Ons. 23 sep</strong></p>
+            <p>Tid <strong>18:00 - 19:00</strong></p>
+            <p>Varighed <strong>1 time</strong></p>
+            <p>Bane <strong>Bane 2</strong></p>
+            <h2>Pris <strong>249 Kr</strong></h2>
+            <a href="#">Fortsæt</a>
+        </section>
+    </main>
+    <footer>
+        <div class="logo">
+            <img src="./img/logo.webp" alt="Full Court Padel logo">
+            <p>Full Court Padel</p>
+        </div>
+
+        <div class="sociale">
+            <a href="#"><img src="./img/youtube.png.webp" alt="YouTube"></a>
+            <a href="#"><img src="./img/facebook.png.webp" alt="Facebook"></a>
+            <a href="#"><img src="./img/twitter.png.webp" alt="Twitter"></a>
+            <a href="#"><img src="./img/instagram.png.webp" alt="Instagram"></a>
+            <a href="#"><img src="./img/linkedin.png.webp" alt="LinkedIn"></a>
+        </div>
+
+        <a href="mailto:fcpadel@gmail.com">fcpadel@gmail.com</a>
+    </footer>
+    <script src="menu.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forside</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="icon" href="./img/favicon.ico">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="./img/logo.webp" alt="Logo">
+            </a>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="booking.html">Baner</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="#">Kontakt</a></li>
+                <li><a href="#">Klubben</a></li>
+            </ul>
+            <button class="burger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+        </nav>
+    </header>
+    <main>
+        <section class="hero_forside">
+            <video autoplay muted loop playsinline width="640" height="360" controls>
+                <source src="./video/padel_montage.mp4" type="video/mp4">
+            </video>
+            <div class="h1_box">
+                <h1 class="h1_forside">FULL COURT PADEL</h1>
+                <p class="h1_tekst">Book bane, spil med venner og bliv bedre alt samlet ét sted</p>
+                <a href="booking.html" class="h1_button">Book bane</a>
+            </div>
+        </section>
+        <section class="søge_knapper">
+            <div class="grid_select">
+
+
+                <select class="søge_knap1" id="klub" name="klub">
+                    <option value="Alle klubber">Alle klubber</option>
+                    <option value="hilleroed">Hillerød</option>
+                    <option value="gentofte">Gentofte</option>
+                    <option value="tisvilde">Tisvilde</option>
+                    <option value="hørsholm">Hørsholm</option>
+                </select>
+                <select class="søge_knap2" id="dato" name="dato">
+                    <option value="Alle datoer">Alle datoter</option>
+                    <option value="09-12-2026">09-12-2026</option>
+                    <option value="10-12-2026">10-12-2026</option>
+                    <option value="11-12-2026">11-12-2026</option>
+                    <option value="12-12-2026">12-12-2026</option>
+                    <option value="13-12-2026">13-12-2026</option>
+                    <option value="14-12-2026">14-12-2026</option>
+                    <option value="15-12-2026">15-12-2026</option>
+                </select>
+                <select class="søge_knap3" id="tidspunkt" name="tidspunkt">
+                    <option value="Alle tidspunkter">Alle tidspunkter</option>
+                    <option value="08:00">08:00</option>
+                    <option value="09:00">09:00</option>
+                    <option value="10:00">10:00</option>
+                    <option value="11:00">11:00</option>
+                    <option value="12:00">12:00</option>
+                    <option value="13:00">13:00</option>
+                    <option value="14:00">14:00</option>
+                    <option value="15:00">15:00</option>
+                </select>
+            </div>
+            <a href="booking.html" class="se_baner">Se baner</a>
+        </section>
+        <h2>Hvad har du lyst til?</h2>
+        <section class="midterfelt">
+            <div class="kort1">
+                <img src="./img/træner.webp" alt="træner">
+                <h3>Ny til padel?</h3>
+                <p>Kom godt fra start med en af vores trænere. Du lærer det grundlæggende og finder dit niveau, og
+                    så er
+                    du klar til at
+                    spille med andre.</p>
+                <a href="event.html" class="se_ledige_trænere">Se vores trænere</a>
+            </div>
+            <div class="kort2">
+                <img src="./img/turnering.webp" alt="turnering">
+                <h3>Spil turneringer</h3>
+                <p>Find en turnering på dit niveau, tilmeld dig på få klik, og mød nye modstandere på banen.</p>
+                <a href="event.html" class="se_ledige_turneringer">Se ledige turneringer</a>
+            </div>
+            <div class="kort3">
+                <img src="./img/fælles.webp" alt="fælles">
+                <h3>Spil med venner</h3>
+                <p>Find en ledig bane tæt på dig, book på få klik, og del kampen med dine venner. Alt I skal gøre, er at
+                    møde op.</p>
+                <a href="booking.html" class="se_ledige_baner">Se ledige baner</a>
+            </div>
+        </section>
+        <section class="kort">
+            <h2>Find din bane</h2>
+            <iframe class="maps_kort"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2235.660816275743!2d12.305127376359302!3d55.92058137905628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4652412ce8520d2d%3A0x4dca40fd8389ba48!2sLet's%20Padel%20A%2FS%20Hiller%C3%B8d!5e0!3m2!1sda!2sdk!4v1791277833541!5m2!1sda!2sdk"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </section>
+    </main>
+    <footer>
+        <div class="logo">
+            <img src="./img/logo.webp" alt="Full Court Padel logo">
+            <p>Full Court Padel</p>
+        </div>
+
+        <div class="sociale">
+            <a href="#"><img src="./img/youtube.png.webp" alt="YouTube"></a>
+            <a href="#"><img src="./img/facebook.png.webp" alt="Facebook"></a>
+            <a href="#"><img src="./img/twitter.png.webp" alt="Twitter"></a>
+            <a href="#"><img src="./img/instagram.png.webp" alt="Instagram"></a>
+            <a href="#"><img src="./img/linkedin.png.webp" alt="LinkedIn"></a>
+        </div>
+
+        <a href="mailto:fcpadel@gmail.com">fcpadel@gmail.com</a>
+    </footer>
+    <script src="menu.js"></script>
+</body>
+
+</html>

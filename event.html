@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="icon" href="./img/favicon.ico">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="./img/logo.webp" alt="Logo">
+            </a>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="booking.html">Baner</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="#">Kontakt</a></li>
+                <li><a href="#">Klubben</a></li>
+            </ul>
+            <button class="burger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="event_h1">
+                <p>Forside / Event</p>
+                <h1 class="h1_event">Events og turneringer</h1>
+                <p class="h1_tekst">Find noget der passer til dit niveau og deltag i events</p>
+            </div>
+        </section>
+        <section class="filter_events">
+            <div class="filter_gruppe">
+                <p>Niveau</p>
+                <div class="filter_knapper">
+                    <a href="#">Alle</a>
+                    <a href="#">Begynder</a>
+                    <a href="#">Mellem</a>
+                    <a href="#">Øvet</a>
+                </div>
+            </div>
+            <div class="filter_gruppe">
+                <p>Type</p>
+                <div class="filter_knapper">
+                    <a href="#">Alle</a>
+                    <a href="#">Events</a>
+                    <a href="#">Turneringer</a>
+                </div>
+            </div>
+            <select class="søge_knap3" id="måned" name="måned">
+                <option value="alle">Alle måneder</option>
+                <option value="januar">Januar</option>
+                <option value="februar">Februar</option>
+                <option value="marts">Marts</option>
+                <option value="april">April</option>
+                <option value="maj">Maj</option>
+                <option value="juni">Juni</option>
+                <option value="juli">Juli</option>
+                <option value="august">August</option>
+                <option value="september">September</option>
+                <option value="oktober">Oktober</option>
+                <option value="november">November</option>
+                <option value="december">December</option>
+            </select>
+        </section>
+        <article class="event_kort">
+            <img src="./img/vibora_cup.webp" alt="Spillere samlet på padelbanen til Vibora Cup">
+
+            <div class="event_indhold">
+                <div class="event_tags">
+                    <span class="tag">Fremhævet</span>
+                    <span class="tag">Turnering</span>
+                    <span class="tag">Niveau: mellem</span>
+                </div>
+
+                <h2>Vibora Cup</h2>
+
+                <div class="event_info">
+                    <span>15:30</span>
+                    <span>9. dec</span>
+                    <span>Hillerød</span>
+                    <span>150 Kr</span>
+                </div>
+
+                <p>Vibora Cup er vores turnering for mellemniveau. Tilmeld dig med en makker, spil mod hold på jeres
+                    niveau og
+                    kæmp om pokalen.</p>
+
+                <div class="event_knapper">
+                    <a href="#" class="tilmeld">Tilmeld</a>
+                    <a href="#" class="laes_mere">Læs mere</a>
+                </div>
+            </div>
+        </article>
+    </main>
+    <footer>
+        <div class="logo">
+            <img src="./img/logo.webp" alt="Full Court Padel logo">
+            <p>Full Court Padel</p>
+        </div>
+
+        <div class="sociale">
+            <a href="#"><img src="./img/youtube.png.webp" alt="YouTube"></a>
+            <a href="#"><img src="./img/facebook.png.webp" alt="Facebook"></a>
+            <a href="#"><img src="./img/twitter.png.webp" alt="Twitter"></a>
+            <a href="#"><img src="./img/instagram.png.webp" alt="Instagram"></a>
+            <a href="#"><img src="./img/linkedin.png.webp" alt="LinkedIn"></a>
+        </div>
+
+        <a href="mailto:fcpadel@gmail.com">fcpadel@gmail.com</a>
+    </footer>
+    <script src="menu.js"></script>
+</body>
+
+</html>
